@@ -1,0 +1,32 @@
+# Fichiers et répertoires de compilation
+/bin/
+/.crystal/
+
+# Dépendances et gestionnaire de paquets Shards
+/.shards/
+#/shard.lock # Le fichier shard.lock peut être inclus pour verrouiller les versions des dépendances dans une application
+
+# Documentation générée
+/docs/*.html
+
+# Fichiers temporaires ou d'environnement de développement
+/tmp/
+.devenv*
+devenv.local.nix
+.direnv
+.pre-commit-config.yaml
+.vscode/
+.idea/
+omnibus/pkg/
+omnibus/.bundle
+omnibus/bin
+omnibus/crystal-darwin-*
+omnibus/vendor
+
+docs/build/
+
+darwin/build/
+
+snapcraft/snapcraft.yaml
+snapcraft/*.snap
+snapcraft/build/
