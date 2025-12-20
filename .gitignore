@@ -34,3 +34,4 @@ snapcraft/build/
 # hello_world.cr compiled
 hello_world
 server
+*.txt
