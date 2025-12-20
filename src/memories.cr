@@ -47,7 +47,7 @@ class HeartfeltMessage
     puts "-" * 40
     
     @memories.each_with_index do |memory, index|
-      sleep 0.8
+      sleep 800.milliseconds  # Correction: Utilise Time::Span
       puts "✨ Memory #{index + 1}: #{memory}".colorize(:light_yellow)
     end
     
@@ -59,7 +59,7 @@ class HeartfeltMessage
     puts "-" * 40
     
     @wishes.each_with_index do |wish, index|
-      sleep 1.0
+      sleep 1.second  # Correction: Utilise Time::Span
       puts "🌟 Wish #{index + 1}: #{wish}".colorize(:light_green)
     end
     
@@ -126,7 +126,7 @@ class HeartfeltMessage
     puts "Progress:".colorize(:cyan)
     5.times do |i|
       print "🕊️  ".colorize(:light_cyan)
-      sleep 0.3
+      sleep 300.milliseconds  # Correction: Utilise Time::Span
     end
     puts " Released with love and light".colorize(:light_cyan)
   end
