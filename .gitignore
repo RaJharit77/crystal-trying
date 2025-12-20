@@ -30,3 +30,7 @@ darwin/build/
 snapcraft/snapcraft.yaml
 snapcraft/*.snap
 snapcraft/build/
+
+# hello_world.cr compiled
+hello_world
+server
