@@ -47,7 +47,7 @@ class HeartfeltMessage
     puts "-" * 40
     
     @memories.each_with_index do |memory, index|
-      sleep 800.milliseconds  # Correction: Utilise Time::Span
+      sleep 800.milliseconds
       puts "✨ Memory #{index + 1}: #{memory}".colorize(:light_yellow)
     end
     
@@ -59,7 +59,7 @@ class HeartfeltMessage
     puts "-" * 40
     
     @wishes.each_with_index do |wish, index|
-      sleep 1.second  # Correction: Utilise Time::Span
+      sleep 1.second
       puts "🌟 Wish #{index + 1}: #{wish}".colorize(:light_green)
     end
     
@@ -126,13 +126,12 @@ class HeartfeltMessage
     puts "Progress:".colorize(:cyan)
     5.times do |i|
       print "🕊️  ".colorize(:light_cyan)
-      sleep 300.milliseconds  # Correction: Utilise Time::Span
+      sleep 300.milliseconds
     end
     puts " Released with love and light".colorize(:light_cyan)
   end
 end
 
-# Additional helper module
 module HealingWords
   def self.affirmations
     [
@@ -152,37 +151,34 @@ module HealingWords
   end
 end
 
-# Run the program
-if __FILE__ == PROGRAM_NAME
-  puts "\n" + "♡" * 60
-  puts "Heart's Release Program".center(60).colorize(:red)
-  puts "♡" * 60
+puts "\n" + "♡" * 60
+puts "Heart's Release Program".center(60).colorize(:red)
+puts "♡" * 60
 
-  program = HeartfeltMessage.new
-  program.run
+program = HeartfeltMessage.new
+program.run
 
-  HealingWords.display_affirmation
+HealingWords.display_affirmation
 
-  puts "\n" + "=" * 60
-  puts "Remember: Some people are seasons, some are lessons,".colorize(:cyan)
-  puts "and all contribute to who we become.".colorize(:cyan)
-  puts "=" * 60
+puts "\n" + "=" * 60
+puts "Remember: Some people are seasons, some are lessons,".colorize(:cyan)
+puts "and all contribute to who we become.".colorize(:cyan)
+puts "=" * 60
 
-  puts "\nWould you like to add a personal wish? (yes/no)"
-  response = gets.try(&.strip.downcase)
+puts "\nWould you like to add a personal wish? (yes/no)"
+response = gets.try(&.strip.downcase)
 
-  if response == "yes"
-    puts "Enter your personal wish for her:"
-    personal_wish = gets.try(&.strip)
-    
-    if personal_wish && !personal_wish.empty?
-      File.open("wishes.txt", "a") do |file|
-        file.puts "\nPersonal wish added today:"
-        file.puts "• #{personal_wish}"
-      end
-      puts "💫 Your wish has been added to the letter.".colorize(:green)
+if response == "yes"
+  puts "Enter your personal wish for her:"
+  personal_wish = gets.try(&.strip)
+  
+  if personal_wish && !personal_wish.empty?
+    File.open("wishes.txt", "a") do |file|
+      file.puts "\nPersonal wish added today:"
+      file.puts "• #{personal_wish}"
     end
+    puts "💫 Your wish has been added to the letter.".colorize(:green)
   end
-
-  puts "\n🕯️  The heart heals in its own time. Be gentle with yourself. 🕯️".colorize(:light_magenta)
 end
+
+puts "\n🕯️  The heart heals in its own time. Be gentle with yourself. 🕯️".colorize(:light_magenta)
