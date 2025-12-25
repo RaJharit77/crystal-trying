@@ -4,3 +4,5 @@ end
 
 say_hello
 say_hello "Crystal"
+say_hello "Developer"
+say_hello "Johnson"
